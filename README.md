@@ -2,7 +2,7 @@
 
 Version of the https://github.com/TowerfallAi/towerfall-ai : V.1.1
 
-Big thaks to him who bring AI to Towerfall, I can do training now :) 
+Big thanks to him who bring AI to Towerfall, I can do training now :) 
 
 See compil and doc at https://github.com/ebe1kenobi/towerfall-mod-kenobi
 
