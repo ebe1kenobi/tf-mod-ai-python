@@ -4,7 +4,7 @@ Version of the https://github.com/TowerfallAi/towerfall-ai : V.1.1
 
 Big thanks to him who bring AI to Towerfall, I can do training now :) 
 
-See compil and doc at https://github.com/ebe1kenobi/towerfall-mod-kenobi
+See compil and doc at https://github.com/ebe1kenobi/towerfall-mod-kenobi to play with 8 players
 
 # AI python mod
   
@@ -23,22 +23,11 @@ A mod that enables AI to play the game [TowerFall Ascension](http://www.towerfal
 |Quest|X|X|||||||
 |DarkWorld|X|X|X|X|||||
 |Trials|X||||||||
-|HeadHunters|X|X|X|X|X|X|X|X|
-|Last Man Standing|X|X|X|X|X|X|X|X|
-|Team Death Match|X|X|X|X|X|X|||
-|Pay Tag|||||||||
+|HeadHunters|X|X|X|X|||||
+|Last Man Standing|X|X|X|X|||||
+|Team Death Match|X|X|X|X|||||
 
-**Game mode compatibility mod :**
 
-|Game mode|aimod|8pmod|Aimod + 8pmod|
-|---------|--------|--------|--------|
-|Quest|X|X|X|
-|DarkWorld|X|X|X|
-|Trials|X|X|X|
-|HeadHunters|X|X|X|
-|Last Man Standing|X|X|X|
-|Team Death Match|X|X|X|
-|Play Tag|X|X|X|
 
 ## Play Game Versus AI when you're alone or with your friends
 
@@ -47,17 +36,14 @@ A mod that enables AI to play the game [TowerFall Ascension](http://www.towerfal
 * You need to execute the bacth TowerFall.bat which execute run_simple_agent.py, You don't need to run Towerfall.exe before, the script python will execute it if it is not executing.
 * This script will connect up to 8 AI to the game according to the gamepad connected (the keyboard don't count) :
   
-| number of gamepad connected | number of possible AI without 8pmode | number of possible AI with 8pmode |
-| ------- | ------- | ------- |
-|    0    |    4    |    8    |
-|    1    |    3    |    7    |
-|    2    |    2    |    6    |
-|    3    |    1    |    5    |
-|    4    |    0    |    4    |
-|    5    |         |    3    |
-|    6    |         |    2    |
-|    7    |         |    1    |
-|    8    |         |    0    |
+| number of gamepad connected | number of possible AI| 
+| ------- | ------- | 
+|    0    |    4    |
+|    1    |    3    |   
+|    2    |    2    |    
+|    3    |    1    |    
+|    4    |    0    |  
+   
 
 **Info** : if you add the option `-nogamepads` the game will not show any gamepad and 4 AI can connect without physically deconnect the gamepads
 
@@ -67,15 +53,15 @@ On the Archer select screen, the AI agent use a keyboard config each, Select the
 
 <a name="aikeyboardconfiguration">
   
-|Action | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 |
-| ----- | -- | -- | -- | -- | -- | -- | -- | -- |
-|Down   | A  | Q  | W  | Y  | H  | F9  | Down  | RightShift  |
-|Up     | Z  | S  | X  | U  | J  | F10  | Up  | RightAlt  |
-|Left   | E  | D  | C  | I  | K  | F11  | Left  | RightControl  |
-|Right  | R  | F  | V  | O  | L  | F12  | Right  | Enter  |
-|Jump / select AI  | NumPad1 | NumPad2 | NumPad3 | NumPad4 | NumPad5 | NumPad6 | NumPad7 | NumPad8 |
-|Shoot / deselect AI | F1 | F2 | F3 | F4 | F4 | F5 | F6 | F7 | F8 |
-|Dodge  | T  | G  | B  | P  | M  | N  | LeftAlt  | LeftWindows  |
+|Action | P1 | P2 | P3 | P4 |
+| ----- | -- | -- | -- | -- |
+|Down   | A  | Q  | W  | Y  |
+|Up     | Z  | S  | X  | U  | 
+|Left   | E  | D  | C  | I  | 
+|Right  | R  | F  | V  | O  | 
+|Jump / select AI  | NumPad1 | NumPad2 | NumPad3 | NumPad4 | 
+|Shoot / deselect AI | F1 | F2 | F3 | F4 | 
+|Dodge  | T  | G  | B  | P  |
 
 ## Testing AI mod for training 
 
@@ -853,7 +839,6 @@ There are a few improvements that are tricky, but in theory possible. They might
 
 - The developer of [Bartizan](https://github.com/Kha/Bartizan#installation), from where I borrowed the basic code for patching.
 - The developer [vcanaa](https://github.com/vcanaa) of [towerfall_ai]([https://github.com/vcanaa](https://github.com/TowerfallAi/towerfall-ai))
-- The developer [Jonesey13](https://github.com/Jonesey13) : [https://github.com/TowerfallAi/towerfall-ai](https://github.com/Jonesey13/TF-8-Player)
 
 - Matt Thorson and everybody else who contributed to making such an awesome game!
 - Everybody who worked on the Bartizan project which allowed the mod to be open-sourceable
