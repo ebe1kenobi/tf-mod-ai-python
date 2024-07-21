@@ -1,3 +1,6 @@
+This is a fork of The developer [vcanaa](https://github.com/vcanaa) of [towerfall_ai]([https://github.com/vcanaa](https://github.com/TowerfallAi/towerfall-ai))
+Big tha,ks to him who bring AI to Towerfall, I can do training now :) 
+
 See compil and doc at https://github.com/ebe1kenobi/towerfall-mod-kenobi
 
 # AI python mod
