@@ -1,13 +1,14 @@
-This is a fork of The developer [vcanaa](https://github.com/vcanaa) of [towerfall_ai]([https://github.com/vcanaa](https://github.com/TowerfallAi/towerfall-ai))
-Big tha,ks to him who bring AI to Towerfall, I can do training now :) 
+**This is a fork** of The developer [vcanaa](https://github.com/vcanaa) of **[towerfall_ai]([https://github.com/vcanaa](https://github.com/TowerfallAi/towerfall-ai**
+
+Version of the https://github.com/TowerfallAi/towerfall-ai : V.1.1
+
+Big thaks to him who bring AI to Towerfall, I can do training now :) 
 
 See compil and doc at https://github.com/ebe1kenobi/towerfall-mod-kenobi
 
 # AI python mod
   
 ![A mod that enables AI to play the game TowerFall Ascension](./banner.png)
-
-See : https://github.com/ebe1kenobi/tf-mod-ai-python
 
 A mod that enables AI to play the game [TowerFall Ascension](http://www.towerfall-game.com). Get started with code examples in python to create your AI to play with (or against).
 
