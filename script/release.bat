@@ -26,7 +26,7 @@ copy "%BUILD_PATH%%DLL_FILE_NAME%" %RELEASE_PATH%
 copy "%BUILD_PATH%%PATCHER_EXE%" %RELEASE_PATH%
 copy "%BUILD_PATH%Mono.Cecil.dll" %RELEASE_PATH%
 
-copy %REPO_PATH%script\TowerFall.bat %RELEASE_PATH%
+copy %REPO_PATH%modFile\TowerFall.bat %RELEASE_PATH%
 
 xcopy /E /I %PYTHON_SCRIPT_PATH%  %RELEASE_PATH%\python
 
