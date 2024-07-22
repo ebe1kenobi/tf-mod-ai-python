@@ -23,7 +23,7 @@ namespace TowerfallAi.Core {
     
     // Original Mods
     public const string TFModAiPythonSource = "https://github.com/ebe1kenobi/tf-mod-ai-python";
-    public const string TFModAiPythonVersion = "v0.1";
+    public const string TFModAiPythonVersion = "v0.2";
     // Fork Mods
     public const string ModAiSource = "https://github.com/TowerfallAi/towerfall-ai";
     public const string ModAiVersion = "v0.1.1"; 
