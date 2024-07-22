@@ -7,7 +7,7 @@ echo =============================================
 < NUL call config.bat
 
 @REM prod path
-cd %TOWERFALL_PYTHON_PATH%
-%GAME_DRIVE%
+cd %PYTHON_SCRIPT_PATH%
+%REPO_DRIVE%
 
 python run_simple_agent.py

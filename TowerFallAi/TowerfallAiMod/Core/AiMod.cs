@@ -60,6 +60,8 @@ namespace TowerfallAi.Core {
     private static ResetOperation resetOperation;
     private static CancellationTokenSource ctsSession = new CancellationTokenSource();
 
+    public static GameTime gameTime;
+
     static Stopwatch gameTimeWatch;
     private static TimeSpan totalGameTime = new TimeSpan();
     private static long totalFrame = 0;
@@ -147,15 +149,20 @@ namespace TowerfallAi.Core {
     }
 
     public static void Update(Action<GameTime> originalUpdate) {
-      int fps = IsMatchRunning() ? Config.fps : 10;
-      if (fps > 0) {
+      int fps = 0;
+      if (Config?.fps > 0)
+      {
+        fps = IsMatchRunning() ? Config.fps : 10;
+        //if (fps > 0) {
         fpsWatch.Stop();
         long ticks = 10000000L / fps;
-        if (fpsWatch.ElapsedTicks < ticks) {
+        if (fpsWatch.ElapsedTicks < ticks)
+        {
           Thread.Sleep((int)(ticks - fpsWatch.ElapsedTicks) / 10000);
         }
         fpsWatch.Reset();
         fpsWatch.Restart();
+        //}
       }
 
       if (!ConnectionDispatcher.IsRunning) {
@@ -170,19 +177,25 @@ namespace TowerfallAi.Core {
         loggedScreenSize = true;
       }
 
-      if (PreUpdate()) {  
-        try {
+      try {
+        if (fps > 0)
+        {
           originalUpdate(GetGameTime());
-        } catch (AggregateException aggregateException) {
-          foreach (var innerException in aggregateException.Flatten().InnerExceptions) {
-            HandleFailure(innerException);
-          }
-        } catch (Exception ex) {
-          HandleFailure(ex);
         }
+        else
+        {
+          originalUpdate(gameTime);
+        }
+      } catch (AggregateException aggregateException) {
+        foreach (var innerException in aggregateException.Flatten().InnerExceptions) {
+          HandleFailure(innerException);
+        }
+      } catch (Exception ex) {
+        HandleFailure(ex);
       }
-            
-      if (gameTimeWatch.ElapsedMilliseconds > logTimeInterval.TotalMilliseconds) {
+
+      if (gameTimeWatch.ElapsedMilliseconds > logTimeInterval.TotalMilliseconds)
+      {
         LogGameTime();
         gameTimeWatch.Restart();
       }
@@ -548,10 +561,10 @@ namespace TowerfallAi.Core {
           {
             throw new ConfigException("No agent in config, starting normal game.");
           }
-          if (config.fps <= 0)
-          {
-            throw new ConfigException("Fps value invalid");
-          }
+          //if (config.fps <= 0)
+          //{
+          //  throw new ConfigException("Fps value invalid");
+          //}
           if (config.level <= 0)
           {
             throw new ConfigException("Invalid level {0}.");
@@ -568,10 +581,10 @@ namespace TowerfallAi.Core {
           //skipWaves
           //solids
 
-          if (config.fps <= 0)
-          {
-            throw new ConfigException("Fps value invalid");
-          }
+          //if (config.fps <= 0)
+          //{
+          //  throw new ConfigException("Fps value invalid");
+          //}
 
           if (config.agentTimeout == null)
           {

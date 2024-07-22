@@ -62,7 +62,7 @@ namespace TowerfallAi.Mod {
         originalUpdate(gameTime);
         return;
       }
-
+      AiMod.gameTime = gameTime;
       AiMod.Update(originalUpdate);
     }
 

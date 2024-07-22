@@ -107,6 +107,8 @@
     <Compile Include="Mod\Cultist.cs" />
     <Compile Include="Mod\Birdman.cs" />
     <Compile Include="Mod\Ghost.cs" />
+    <Compile Include="Mod\MainMenu.cs" />
+    <Compile Include="Mod\Loader.cs" />
     <Compile Include="Mod\PauseMenu.cs" />
     <Compile Include="Mod\Slime.cs" />
     <Compile Include="Mod\ReaperCrystal.cs" />
