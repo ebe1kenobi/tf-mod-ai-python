@@ -32,6 +32,8 @@ namespace TowerfallAi.Core {
     public const string BaseDirectory = "aimod";
     private const string defaultConfigName = "config.json";
 
+    public static bool AgentConnected = false;
+
     // If this is set to false, this mod should do no effect.
     public static bool ModAIEnabled { get; private set;}
     public static bool ModAITraining { get; private set;}
@@ -153,7 +155,6 @@ namespace TowerfallAi.Core {
       if (Config?.fps > 0)
       {
         fps = IsMatchRunning() ? Config.fps : 10;
-        //if (fps > 0) {
         fpsWatch.Stop();
         long ticks = 10000000L / fps;
         if (fpsWatch.ElapsedTicks < ticks)
@@ -162,7 +163,6 @@ namespace TowerfallAi.Core {
         }
         fpsWatch.Reset();
         fpsWatch.Restart();
-        //}
       }
 
       if (!ConnectionDispatcher.IsRunning) {
@@ -178,13 +178,15 @@ namespace TowerfallAi.Core {
       }
 
       try {
-        if (fps > 0)
-        {
-          originalUpdate(GetGameTime());
-        }
-        else
-        {
-          originalUpdate(gameTime);
+        if (!AgentConnected || PreUpdate()) {
+          if (fps > 0)
+          {
+            originalUpdate(GetGameTime());
+          }
+          else
+          {
+            originalUpdate(gameTime);
+          }
         }
       } catch (AggregateException aggregateException) {
         foreach (var innerException in aggregateException.Flatten().InnerExceptions) {
