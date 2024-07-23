@@ -18,7 +18,7 @@ namespace TowerfallAi.Mod
 
     public override void Render()
     {
-      Message = "WAITING IA TO CONNECT ...";
+      Message = "WAITING AI TO CONNECT ...";
       for (var i = 0; i < (int)(DateTime.Now - creationTime).TotalSeconds; i++) {
         Message += ".";
       }
