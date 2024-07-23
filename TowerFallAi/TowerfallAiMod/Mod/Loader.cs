@@ -5,7 +5,7 @@ using Patcher;
 using TowerFall;
 using TowerfallAi.Core;
 
-namespace TowerfallModPlayTag
+namespace TowerfallAi.Mod
 {
   [Patch]
   public class MyLoader : Loader
